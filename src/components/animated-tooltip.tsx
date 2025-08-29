@@ -9,6 +9,7 @@ import {
   
 } from "motion/react";
 
+
 export const AnimatedTooltip = ({
   items,
 }: {
@@ -38,7 +39,7 @@ export const AnimatedTooltip = ({
 
   return (
     <>
-      {items.map((item, idx) => (
+      {items.map((item) => (
         <div
           className="group relative -ml-5"
           key={item.name}
