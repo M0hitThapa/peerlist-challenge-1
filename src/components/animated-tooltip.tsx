@@ -89,7 +89,7 @@ export const AnimatedTooltip = ({
             width={500}
             src={item.image}
             alt={item.name}
-            className="relative  h-20 w-20 rounded-full border-4 border-black/20 object-cover object-top shadow-md shadow-gray-200 "
+            className="relative  h-24 w-24 rounded-full border-6 border-black/20 object-cover object-top shadow-md shadow-gray-200 "
           />
          </motion.div>
         </div>
