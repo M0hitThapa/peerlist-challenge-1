@@ -3,10 +3,10 @@
 import React, { useState, useRef } from "react";
 import {
   motion,
-  useTransform,
+  
   AnimatePresence,
   useMotionValue,
-  useSpring,
+  
 } from "motion/react";
 
 export const AnimatedTooltip = ({
@@ -15,23 +15,15 @@ export const AnimatedTooltip = ({
   items: {
     id: number;
     name: string;
-    designation: string;
+    
     image: string;
   }[];
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const springConfig = { stiffness: 100, damping: 15 };
+
   const x = useMotionValue(0);
   const animationFrameRef = useRef<number | null>(null);
 
-  const rotate = useSpring(
-    useTransform(x, [-100, 100], [-45, 45]),
-    springConfig,
-  );
-  const translateX = useSpring(
-    useTransform(x, [-100, 100], [-50, 50]),
-    springConfig,
-  );
 
   const handleMouseMove = (event: any) => {
     if (animationFrameRef.current) {
@@ -74,8 +66,7 @@ export const AnimatedTooltip = ({
                 }}
                 className="absolute -top-12 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center justify-center   text-xs "
               >
-                {/* <div className="absolute inset-x-10 -bottom-px z-30 h-px w-[20%] bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
-                <div className="absolute -bottom-px left-10 z-30 h-px w-[40%] bg-gradient-to-r from-transparent via-sky-500 to-transparent" /> */}
+                
                 <div className=" text-lg text-shadow-md cherry-swash-bold text-emerald-800">
                   {item.name}
                 </div>

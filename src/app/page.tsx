@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import { AnimatedTooltipPreview } from "./(components)/tooltip";
 
 export default function Home() {
